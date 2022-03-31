@@ -7,7 +7,9 @@ import { NavigationContainer } from "@react-navigation/native";
 function CategoriesScreens(props) {
   function renderCategoryItem(itemData) {
     function pressHandler() {
-      props.navigation.navigate("MealsOverview");
+      props.navigation.navigate("MealsOverview", {
+        categoryId: itemData.item.id,
+      });
     }
     return (
       <CategoryGridTile
