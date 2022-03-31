@@ -9,6 +9,7 @@ function CategoryGridTile(props) {
           styles.button,
           pressed ? styles.buttonPressed : null,
         ]}
+        onPress={props.onPress}
       >
         <View style={[styles.innerContainer, { backgroundColor: props.color }]}>
           <Text style={styles.title}>{props.title}</Text>
