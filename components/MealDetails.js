@@ -3,9 +3,15 @@ import { View, Text, StyleSheet } from "react-native";
 function MealDetails(props) {
   return (
     <View style={styles.details}>
-      <Text style={styles.detailItem}>{props.duration}m</Text>
-      <Text style={styles.detailItem}>{props.complexity.toUpperCase()}</Text>
-      <Text style={styles.detailItem}>{props.affordability.toUpperCase()}</Text>
+      <Text style={[styles.detailItem, props.textStyle]}>
+        {props.duration}m
+      </Text>
+      <Text style={[styles.detailItem, props.textStyle]}>
+        {props.complexity.toUpperCase()}
+      </Text>
+      <Text style={[styles.detailItem, props.textStyle]}>
+        {props.affordability.toUpperCase()}
+      </Text>
     </View>
   );
 }
